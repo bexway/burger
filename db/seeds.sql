@@ -1,0 +1,1 @@
+INSERT INTO burgers (burger_name, devoured) values ('Royale', false), ('Duxelle', false);
