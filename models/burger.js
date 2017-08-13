@@ -8,12 +8,12 @@ var burgerModel = {
         });
     },
     insertOne: function(callback) {
-        orm.insertOne("burgers", function(res) {
+        orm.insertOne("burgers", ["burger_name", "devoured"], ["Name", false], function(res) {
             callback(res);
         });
     },
     updateOne: function(callback) {
-        orm.updateOne("burgers", function(res) {
+        orm.updateOne("burgers", {"devoured": true}, "id=4", function(res) {
           callback(res);
         });
     },
