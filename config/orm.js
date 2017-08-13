@@ -47,6 +47,8 @@ var orm = {
           if (err) {
             throw err;
           }
+          console.log("test")
+          console.log(callback)
           callback(result);
         });
       }

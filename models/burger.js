@@ -12,8 +12,8 @@ var burgerModel = {
             callback(res);
         });
     },
-    updateOne: function(callback) {
-        orm.updateOne("burgers", {"devoured": true}, "id=4", function(res) {
+    updateOne: function(valueObj, condition, callback) {
+        orm.updateOne("burgers", valueObj, condition, function(res) {
           callback(res);
         });
     },
