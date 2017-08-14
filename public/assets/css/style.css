@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    --ff-title: 'Permanent Marker', cursive;
+    --ff-gen: 'Muli', sans-serif;
+}
+
+.button{
+    background-color:#C10000;
+    font-family: var(--ff-gen);
+    color: white;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.full-page{
+    background-color: #FFD849;
+}
+
+.font-gen{
+    font-family: var(--ff-gen);
+    font-size: 1em;
+}
+
+.font-title{
+    color:#C10000;
+    font-family: var(--ff-title);
+    font-size: 2em;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-around{
+    justify-content: space-around;
+}
+
+.flex-center{
+    justify-content: center;
+}
+
+.font-center{
+    text-align: center;
+}
+
+.space-tb{
+    margin: .5em 0em;
+}

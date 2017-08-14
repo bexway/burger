@@ -1,24 +1,26 @@
-<div class="container">
-    <h1>Eat the Burger!</h1>
+<h1 class="font-title font-center">Eat the Burger!</h1>
 
+<div class="flex flex-around space-tb">
     <div>
-        <h2>Non-eaten burgers</h2>
-        <ul>
+        <h2 class="font-title">Non-eaten burgers</h2>
+        <ul class="font-gen">
             {{#each burger}}
                 {{#unless this.devoured}}
-                    <li>{{this.id}}. {{this.burger_name}}</li>
-                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                    <li class="space-tb"> 
+                        <form action="/{{this.id}}?_method=PUT" method="POST">
+                        {{this.id}}. {{this.burger_name}}
                         <input type="hidden" name="devoured" value="true">
-                        <button type="submit">Eat this!</button>
-                    </form>
+                        <button class="button" type="submit">Eat this!</button>
+                        </form>
+                    </li>
                 {{/unless}}
             {{/each}}
         </ul>
     </div>
 
     <div>
-        <h2>Eaten burgers</h2>
-        <ul>
+        <h2 class="font-title">Eaten burgers</h2>
+        <ul class="font-gen">
             {{#each burger}}
                 {{#if this.devoured}}
                     <li>{{this.id}}. {{this.burger_name}}</li>
@@ -26,14 +28,18 @@
             {{/each}}
         </ul>
     </div>
+</div>
 
+<div class="flex flex-center font-gen">
     <form action="/" method="POST">
 
-        <div class="form-group">
-            <label for="ca">Burger Name:</label>
-            <input type="text" id="burger_name" name="burger_name">
+        <div class="flex flex-center">
+            <div class="form-group">
+                <label for="burger_name">Burger Name:</label>
+                <input type="text" id="burger_name" name="burger_name">
+            </div> 
+            <button class="button" type="submit">Add Burger</button>
         </div>
-
-        <button type="submit">Add Burger</button>
+            
     </form>
 </div>
