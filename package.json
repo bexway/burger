@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/bexway/burger/issues"
   },
-  "homepage": "https://github.com/bexway/burger#readme"
+  "homepage": "https://github.com/bexway/burger#readme",
+  "engines": {
+    "node": "4.1.1"
+  }
 }
