@@ -41,14 +41,12 @@ var orm = {
           callback(result);
         });
       },
-      updateOne: function(tableName, newVals, condition, callback) {
-        var queryString = "UPDATE "+tableName+" SET "+objToSql(newVals)+" WHERE "+condition+";";
+      updateOne: function(tableName, valueObj, condition, callback) {
+        var queryString = "UPDATE "+tableName+" SET "+objToSql(valueObj)+" WHERE "+condition+";";
         connection.query(queryString, function(err, result) {
           if (err) {
             throw err;
           }
-          console.log("test")
-          console.log(callback)
           callback(result);
         });
       }

@@ -7,8 +7,8 @@ var burgerModel = {
         callback(res);
         });
     },
-    insertOne: function(callback) {
-        orm.insertOne("burgers", ["burger_name", "devoured"], ["Name", false], function(res) {
+    insertOne: function(burgerName, callback) {
+        orm.insertOne("burgers", ["burger_name", "devoured"], [burgerName, false], function(res) {
             callback(res);
         });
     },
