@@ -10,14 +10,11 @@ function generateQmarks(num){
 
 function objToSql(ob) {
   var arr = [];
-
-  for (var key in ob) {
-    //double-checking that that property is in the object?
-    if (Object.hasOwnProperty.call(ob, key)) {
+  if(ob){
+    for (var key in ob) {
       arr.push(key + "=" + ob[key]);
     }
   }
-
   return arr.toString();
 }
 
